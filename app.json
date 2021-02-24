@@ -1,7 +1,7 @@
 {
   "name": "Start on Heroku: Node.js",
   "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/cors-server",
+  "repository": "https://github.com/SammyRobensParadise/cors-server",
   "keywords": ["node", "express", "heroku","cors"],
   "image": "heroku/nodejs"
 }
