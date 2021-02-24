@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/Rob--W/cors-anywhere.svg?branch=master)](https://travis-ci.org/Rob--W/cors-anywhere)
-[![Coverage Status](https://coveralls.io/repos/github/Rob--W/cors-anywhere/badge.svg?branch=master)](https://coveralls.io/github/Rob--W/cors-anywhere?branch=master)
+[![Build Status](https://travis-ci.org/SammyRobensParadise/cors-server.svg?branch=master)](https://travis-ci.org/SammyRobensParadise/cors-server)
+[![Coverage Status](https://coveralls.io/repos/github/SammyRobensParadise/cors-server/badge.svg?branch=master)](https://coveralls.io/github/SammyRobensParadise/cors-server?branch=master)
 
 **CORS Anywhere** is a NodeJS proxy which adds CORS headers to the proxied request.
 
@@ -20,7 +20,7 @@ var host = process.env.HOST || '0.0.0.0';
 // Listen on a specific port via the PORT environment variable
 var port = process.env.PORT || 8080;
 
-var cors_proxy = require('cors-anywhere');
+var cors_proxy = require('cors-server');
 cors_proxy.createServer({
     originWhitelist: [], // Allow all origins
     requireHeader: ['origin', 'x-requested-with'],
@@ -40,8 +40,8 @@ Request examples:
 
 Live examples:
 
-* https://cors-anywhere.herokuapp.com/
-* https://robwu.nl/cors-anywhere.html - This demo shows how to use the API.
+* https://cors-server.herokuapp.com/
+* https://robwu.nl/cors-server.html - This demo shows how to use the API.
 
 ## Documentation
 
@@ -54,7 +54,7 @@ If you want to automatically enable cross-domain requests when needed, use the f
 
 ```javascript
 (function() {
-    var cors_api_host = 'cors-anywhere.herokuapp.com';
+    var cors_api_host = 'cors-server.herokuapp.com';
     var cors_api_url = 'https://' + cors_api_host + '/';
     var slice = [].slice;
     var origin = window.location.protocol + '//' + window.location.host;
@@ -76,7 +76,7 @@ If you're using jQuery, you can also use the following code **instead of** the p
 ```javascript
 jQuery.ajaxPrefilter(function(options) {
     if (options.crossDomain && jQuery.support.cors) {
-        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+        options.url = 'https://cors-server.herokuapp.com/' + options.url;
     }
 });
 ```
@@ -88,7 +88,7 @@ proxy requests. The following options are supported:
 
 * function `getProxyForUrl` - If set, specifies which intermediate proxy to use for a given URL.
   If the return value is void, a direct request is sent. The default implementation is
-  [`proxy-from-env`](https://github.com/Rob--W/proxy-from-env), which respects the standard proxy
+  [`proxy-from-env`](https://github.com/SammyRobensParadise/proxy-from-env), which respects the standard proxy
   environment variables (e.g. `https_proxy`, `no_proxy`, etc.).  
 * array of strings `originBlacklist` - If set, requests whose origin is listed are blocked.  
   Example: `['https://bad.example.com', 'http://bad.example.com']`
@@ -128,7 +128,7 @@ see the sample code in [test/test-examples.js](test/test-examples.js).
 
 ### Demo server
 
-A public demo of CORS Anywhere is available at https://cors-anywhere.herokuapp.com. This server is
+A public demo of CORS Anywhere is available at https://cors-server.herokuapp.com. This server is
 only provided so that you can easily and quickly try out CORS Anywhere. To ensure that the service
 stays available to everyone, the number of requests per period is limited, except for requests from
 some explicitly whitelisted origins.
