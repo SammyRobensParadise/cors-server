@@ -2,7 +2,6 @@
   "name": "Start on Heroku: Node.js",
   "description": "A barebones Node.js app using Express 4",
   "repository": "https://github.com/heroku/cors-server",
-  "logo": "https://cdn.rawgit.com/heroku/cors-server/main/public/node.svg",
   "keywords": ["node", "express", "heroku","cors"],
   "image": "heroku/nodejs"
 }
